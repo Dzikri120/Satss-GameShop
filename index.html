@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>©Satss GameShop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        * { font-family: 'Poppins', sans-serif; }
+        body { overflow-x: hidden; }
+        .video-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -2; object-fit: cover;
+        }
+        .video-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.4); z-index: -1;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+        }
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            transform: translateY(0);
+            transition: all 0.3s ease;
+        }
+        .whatsapp-btn:hover {
+            background: linear-gradient(135deg, #128C7E 0%, #075E54 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+        }
+        .profile-img { animation: float 3s ease-in-out infinite; transition: all 0.3s ease; }
+        .profile-img:hover { transform: scale(1.05); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); }
+        @keyframes float { 0%,100%{ transform: translateY(0px);} 50%{ transform: translateY(-10px);} }
+        .scroll-container { height: 100vh; overflow-y: auto; scroll-behavior: smooth; }
+        .fade-in { opacity: 0; transform: translateY(30px); animation: fadeInUp 0.8s ease forwards; }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        .stagger-5 { animation-delay: 0.5s; }
+        .stagger-6 { animation-delay: 0.6s; }
+        @media (max-width: 768px) {
+            .glass-card { margin: 10px; backdrop-filter: blur(15px); }
+            .profile-img { width: 100px; height: 100px; }
+        }
+    </style>
+</head>
+<body class="scroll-container">
+    <div id="video-bg-placeholder"></div>
+    <div class="video-overlay"></div>
+
+    <div class="min-h-screen flex flex-col items-center justify-center p-4 py-20">
+        <div class="w-full max-w-md glass-card rounded-3xl overflow-hidden p-8">
+            <div class="flex flex-col items-center mb-8 fade-in stagger-1">
+                <div class="relative">
+                    <div class="profile-container"></div> 
+                </div>
+                <h1 class="text-2xl font-bold mt-6 text-white drop-shadow-lg">Satss GameShop</h1>
+                <p class="text-white/80 text-center mt-2 font-medium">All Sosmed</p>
+            </div>
+
+            <div class="space-y-4 mb-8">
+                <a href="https://wa.me/6283822615363" class="whatsapp-btn fade-in stagger-2 flex items-center justify-center text-white font-semibold py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transition-all bg-gradient-to-r from-green-500 to-emerald-500">
+                    <i class="fab fa-whatsapp mr-3 text-xl"></i> WhatsApp
+                </a>
+                <a href="https://whatsapp.com/channel/0029Vb5mwud9sBI23qIQOK2q" class="whatsapp-btn fade-in stagger-3 flex items-center justify-center text-white font-semibold py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transition-all bg-gradient-to-r from-green-500 to-emerald-500">
+                    <i class="fab fa-whatsapp mr-3 text-xl"></i> Channel
+                </a>
+                <a href="https://chat.whatsapp.com/FbKtw25nVvPD7ZiUHSpXZO?mode=ac_t" class="whatsapp-btn fade-in stagger-4 flex items-center justify-center text-white font-semibold py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transition-all bg-gradient-to-r from-green-500 to-emerald-500">
+                    <i class="fab fa-whatsapp mr-3 text-xl"></i> Group
+                </a>
+                <a href="https://t.me/satss9" class="whatsapp-btn fade-in stagger-6 flex items-center justify-center text-white font-semibold py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transition-all bg-gradient-to-r from-blue-200 to-blue-600">
+                    <i class="fab fa-telegram mr-3 text-xl"></i> Telegram
+                </a>
+                <a href="https://www.instagram.com/satss9__" class="whatsapp-btn fade-in stagger-7 flex items-center justify-center text-white font-semibold py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transition-all bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
+                    <i class="fab fa-instagram mr-3 text-xl"></i> Instagram
+                </a>
+                <a href="https://www.tiktok.com/@satss9._?_t=ZS-8xrCfJsLNXL&_r=1" class="whatsapp-btn fade-in stagger-8 flex items-center justify-center text-white font-semibold py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transition-all bg-gradient-to-r from-black to-gray-800">
+                    <i class="fab fa-tiktok mr-3 text-xl"></i> TikTok
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Video background
+        (function () {
+            const video = document.createElement('video');
+            video.className = 'video-bg';
+            video.autoplay = true;
+            video.muted = true;
+            video.loop = true;
+            video.src = 'https://qu.ax/lzBsF.mp4'; // Background
+            video.playsInline = true;
+            document.body.appendChild(video);
+        })();
+
+        // Overlay
+        (function () {
+            const overlay = document.createElement('div');
+            overlay.className = 'video-overlay';
+            document.body.appendChild(overlay);
+        })();
+
+        // Profile video
+        (function () {
+            const container = document.querySelector('.profile-container');
+            if (container) {
+                container.innerHTML = `
+                    <div class="relative">
+                        <video autoplay loop muted playsinline class="profile-img w-32 h-32 rounded-full object-cover border-4 border-white/30 shadow-2xl">
+                            <source src="https://qu.ax/zBRvd.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                `;
+            }
+        })();
+
+        // Footer
+        (function() {
+            const footer = document.createElement('div');
+            footer.className = 'mt-8 text-center fade-in stagger-6';
+            footer.innerHTML = `<p class="text-white/80 font-medium drop-shadow-lg">Created By <span class="text-green-400 font-bold">SatssGameShop</span></p>`;
+            document.body.appendChild(footer);
+        })();
+
+        // Ripple effect on buttons
+        document.querySelectorAll('.whatsapp-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+                ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+                ripple.classList.add('ripple');
+                this.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 600);
+                setTimeout(() => window.location.href = href, 100);
+            });
+        });
+
+        // Ripple effect CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            .ripple {
+                position: absolute;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.6);
+                transform: scale(0);
+                animation: ripple 0.6s linear;
+                pointer-events: none;
+            }
+            @keyframes ripple {
+                to { transform: scale(4); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
